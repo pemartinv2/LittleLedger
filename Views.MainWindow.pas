@@ -60,6 +60,8 @@ type
     LinkPropertyToFieldCaption3: TLinkPropertyToField;
     LinkPropertyToFieldCaption4: TLinkPropertyToField;
     LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }

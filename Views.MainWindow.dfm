@@ -110,6 +110,20 @@ object MainWindow: TMainWindow
       Height = 15
       Caption = 'AmountLabel'
     end
+    object SpeedButton1: TSpeedButton
+      Left = 472
+      Top = 16
+      Width = 23
+      Height = 22
+      Caption = 'Edit'
+    end
+    object SpeedButton2: TSpeedButton
+      Left = 509
+      Top = 16
+      Width = 36
+      Height = 22
+      Caption = 'Delete'
+    end
   end
   object TransactionBinding: TBindingsList
     Methods = <>
