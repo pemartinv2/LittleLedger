@@ -97,14 +97,14 @@ object MainWindow: TMainWindow
       Caption = 'DescriptionLabel'
     end
     object Label3: TLabel
-      Left = 464
+      Left = 352
       Top = 8
       Width = 47
       Height = 15
       Caption = 'Amount:'
     end
     object AmountLabel: TLabel
-      Left = 464
+      Left = 352
       Top = 29
       Width = 72
       Height = 15
