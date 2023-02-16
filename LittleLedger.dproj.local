@@ -3,14 +3,14 @@
 	<Transactions>
     <Transaction>1899-12-30 00:00:00.000.626,=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.pas</Transaction>
     <Transaction>1899-12-30 00:00:00.000.386,C:\Users\Public\Documents\Projects\LittleLedger\Data.Ledger.pas=C:\Users\Public\Documents\Projects\LittleLedger\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.246,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\View.DetailBase.pas=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.240,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\View.DetailBase.pas=</Transaction>
     <Transaction>1899-12-30 00:00:00.000.044,=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.198,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.pas=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\View.AddTransaction.pas</Transaction>
     <Transaction>1899-12-30 00:00:00.000.664,=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.198,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.pas=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\View.AddTransaction.pas</Transaction>
     <Transaction>1899-12-30 00:00:00.000.380,C:\Users\Public\Documents\Projects\LittleLedger\Views.MainWindow.dfm=C:\Users\Public\Documents\Projects\Unit1.dfm</Transaction>
     <Transaction>1899-12-30 00:00:00.000.380,C:\Users\Public\Documents\Projects\LittleLedger\Views.MainWindow.pas=C:\Users\Public\Documents\Projects\Unit1.pas</Transaction>
     <Transaction>1899-12-30 00:00:00.000.152,C:\Users\Public\Documents\Projects\LittleLedger\LittleLedger.dproj=C:\Users\Public\Documents\Projects\Project1.dproj</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.240,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\View.DetailBase.pas=</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.246,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\View.DetailBase.pas=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.pas</Transaction>
     <Transaction>1899-12-30 00:00:00.000.081,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Data.Ledger.pas=</Transaction>
     <Transaction>1899-12-30 00:00:00.000.472,=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Data.Ledger.pas</Transaction>
     <Transaction>1899-12-30 00:00:00.000.198,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.dfm=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\View.AddTransaction.dfm</Transaction>
