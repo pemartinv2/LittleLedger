@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.626,=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.386,C:\Users\Public\Documents\Projects\LittleLedger\Data.Ledger.pas=C:\Users\Public\Documents\Projects\LittleLedger\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.246,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\View.DetailBase.pas=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.044,=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.198,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.pas=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\View.AddTransaction.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.664,=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.380,C:\Users\Public\Documents\Projects\LittleLedger\Views.MainWindow.dfm=C:\Users\Public\Documents\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.380,C:\Users\Public\Documents\Projects\LittleLedger\Views.MainWindow.pas=C:\Users\Public\Documents\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.152,C:\Users\Public\Documents\Projects\LittleLedger\LittleLedger.dproj=C:\Users\Public\Documents\Projects\Project1.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.240,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\View.DetailBase.pas=</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.081,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Data.Ledger.pas=</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.472,=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Data.Ledger.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.198,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.dfm=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\View.AddTransaction.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.604,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\View.AddTransaction.pas=</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.064,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Frame.TransactionDetailFrame.dfm=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.386,C:\Users\Public\Documents\Projects\LittleLedger\Data.Ledger.dfm=C:\Users\Public\Documents\Projects\LittleLedger\Unit1.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.064,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Frame.TransactionDetailFrame.pas=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.737,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Frame.TransactionDetailFrame.pas=</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.246,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\View.DetailBase.dfm=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.915,=C:\Users\Public\Documents\Projects\LittleLedger\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.597,=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.564,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Details.pas=C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.423,C:\Users\pemar\OneDrive\Documents\Embarcadero\Studio\Projects\LittleLedger\Details.pas=</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.860,=C:\Users\Public\Documents\Projects\Unit1.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Views.MainWindow.pas"/>
+    <File Path="Views.MainWindow.dfm"/>
+    <File Path="Data.Ledger.pas"/>
+    <File Path="Data.Ledger.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>
