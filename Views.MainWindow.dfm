@@ -11,7 +11,6 @@ object MainWindow: TMainWindow
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OnCreate = FormCreate
   TextHeight = 15
   object CommandsPanel: TPanel
     Left = 0
@@ -29,6 +28,7 @@ object MainWindow: TMainWindow
       Height = 25
       Caption = 'Add new transaction...'
       TabOrder = 0
+      OnClick = AddNewTransactionClick
     end
   end
   object BottomPanel: TPanel
@@ -44,13 +44,19 @@ object MainWindow: TMainWindow
     ExplicitTop = 629
     ExplicitWidth = 819
     object TotalAmount: TLabel
-      Left = 795
+      Left = 760
       Top = 0
-      Width = 28
+      Width = 63
       Height = 40
       Align = alRight
       Caption = 'Total:'
-      ExplicitHeight = 15
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitHeight = 32
     end
   end
   object TransactionList: TControlList
@@ -110,26 +116,30 @@ object MainWindow: TMainWindow
       Height = 15
       Caption = 'AmountLabel'
     end
-    object SpeedButton1: TSpeedButton
-      Left = 472
+    object EditButton: TControlListButton
+      Left = 448
       Top = 16
-      Width = 23
-      Height = 22
+      Width = 33
+      Height = 25
       Caption = 'Edit'
+      LinkHotColor = clHighlight
+      OnClick = EditButtonClick
     end
-    object SpeedButton2: TSpeedButton
-      Left = 509
+    object DeleteButton: TControlListButton
+      Left = 487
       Top = 16
-      Width = 36
-      Height = 22
+      Width = 42
+      Height = 25
       Caption = 'Delete'
+      LinkHotColor = clHighlight
+      OnClick = DeleteButtonClick
     end
   end
   object TransactionBinding: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 44
-    Top = 517
+    Left = 52
+    Top = 589
     object LinkPropertyToFieldCaption: TLinkPropertyToField
       Category = 'Quick Bindings'
       DataSource = TotalAmountSource

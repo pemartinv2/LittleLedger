@@ -19,18 +19,18 @@ Coordinates=271,1,73,33
 [SQLiteDriverLinq]
 Coordinates=271,53,99,33
 
-[LedgerDataAmount]
-Coordinates=245,105,109,33
-
-[Description]
-Coordinates=245,157,70,33
-
-[TransactionDate]
-Coordinates=245,209,95,33
-
 [TotalAmount]
 Coordinates=226,250,77,33
 
-[DataId]
+[AmountField]
+Coordinates=245,105,109,33
+
+[DescriptionField]
+Coordinates=245,157,70,33
+
+[DateField]
+Coordinates=245,209,95,33
+
+[IDField]
 Coordinates=177,250,45,33
 

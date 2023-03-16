@@ -25,7 +25,6 @@ uses
   FireDAC.Comp.ScriptCommands,
   FireDAC.Stan.Util,
   FireDAC.Comp.Script,
-  Details,
   FireDAC.Stan.ExprFuncs,
   FireDAC.Phys.SQLiteWrapper,
   FireDAC.Phys.SQLiteWrapper.Stat,
@@ -40,13 +39,12 @@ type
     SQLiteDriverLinq: TFDPhysSQLiteDriverLink;
     SQLiteConn: TFDConnection;
     SQLiteScripts: TFDScript;
-    DataId: TFDAutoIncField;
-    TransactionDate: TDateTimeField;
-    Description: TWideMemoField;
-    LedgerDataAmount: TCurrencyField;
+    IDField: TFDAutoIncField;
+    DateField: TDateTimeField;
+    DescriptionField: TWideMemoField;
+    AmountField: TCurrencyField;
     TotalAmount: TFloatField;
     procedure DataModuleCreate(Sender: TObject);
-    procedure LedgerDataNewRecord(DataSet: TDataSet);
     procedure RefreshTotal(DataSet: TDataSet);
     procedure SQLiteConnBeforeConnect(Sender: TObject);
   private
@@ -54,9 +52,12 @@ type
   public
     { Public declarations }
 
-    procedure AddTransaction(const ADetail :TDetailFields);
-    function GetCurrentTransaction: TDetailFields;
-    procedure ModifyCurrentTransaction(const ADetailFields: TDetailFields);
+    procedure AddTransaction(const ADate: TDateTime;
+      const ADescription: string; const AAmount: Currency);
+    procedure GetCurrentTransaction(var ADate: TDateTime;
+      var ADescription: string; var AAmount: Currency);
+    procedure ModifyCurrentTransaction(const ADate: TDateTime;
+      const ADescription: string; const AAmount: Currency);
   end;
 
 
@@ -68,13 +69,11 @@ implementation
 
 uses System.IOUtils, Vcl.Dialogs, System.UITypes;
 
-procedure TLedgerModule.AddTransaction(const ADetail: TDetailFields);
+procedure TLedgerModule.AddTransaction(const ADate: TDateTime;
+  const ADescription: string; const AAmount: Currency);
 begin
-{  LedgerData.Insert;
-  LedgerDataDESCRIPTION.AsString := Adetail.Descritpion;
-  LedgerDataTRANSACTIONDATE.AsDateTime := Adetail.TransactionDate;
-  LedgerDataAMOUNT.AsCurrency := ADetail.Amount;
-  LedgerData.Post;}
+  LedgerData.InsertRecord([nil, Adate, ADescription, AAmount]);
+  LedgerData.Refresh;
 end;
 
 procedure TLedgerModule.DataModuleCreate(Sender: TObject);
@@ -97,26 +96,22 @@ begin
   end;
 end;
 
-function TLedgerModule.GetCurrentTransaction: TDetailFields;
+procedure TLedgerModule.GetCurrentTransaction(var ADate: TDateTime;
+  var ADescription: string; var AAmount: Currency);
 begin
-{  Result.Descritpion := LedgerDataDESCRIPTION.AsString;
-  Result.TransactionDate := LedgerDataTRANSACTIONDATE.AsDateTime;
-  Result.Amount := LedgerDataAMOUNT.AsCurrency;}
+  ADate := DateField.Value;
+  ADescription := DescriptionField.Value;
+  AAmount := AmountField.Value;
 end;
 
-procedure TLedgerModule.LedgerDataNewRecord(DataSet: TDataSet);
+procedure TLedgerModule.ModifyCurrentTransaction(const ADate: TDateTime;
+  const ADescription: string; const AAmount: Currency);
 begin
-//  LedgerDataTRANSACTIONDATE.AsDateTime := Now;
-end;
-
-procedure TLedgerModule.ModifyCurrentTransaction(
-  const ADetailFields: TDetailFields);
-begin
-{  LedgerData.Edit;
-  LedgerDataDESCRIPTION.AsString := ADetailFields.Descritpion;
-  LedgerDataTRANSACTIONDATE.AsDateTime := ADetailFields.TransactionDate;
-  LedgerDataAMOUNT.AsCurrency := ADetailFields.Amount;
-  LedgerData.Post;}
+  LedgerData.Edit;
+  DateField.Value := ADate;
+  DescriptionField.Value := ADescription;
+  AmountField.Value := AAmount;
+  LedgerData.Post;
 end;
 
 procedure TLedgerModule.RefreshTotal(DataSet: TDataSet);

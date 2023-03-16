@@ -8,34 +8,31 @@ object LedgerModule: TLedgerModule
     AfterPost = RefreshTotal
     AfterDelete = RefreshTotal
     AfterRefresh = RefreshTotal
-    OnNewRecord = LedgerDataNewRecord
     Connection = SQLiteConn
     SQL.Strings = (
       'Select * From Transactions '
       'Order by TransactionDate Desc')
     Left = 69
     Top = 144
-    object DataId: TFDAutoIncField
+    object IDField: TFDAutoIncField
       FieldName = 'Id'
       Origin = 'Id'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
-    object TransactionDate: TDateTimeField
+    object DateField: TDateTimeField
       DisplayLabel = 'Transaction Date'
       FieldName = 'TransactionDate'
       Origin = 'TransactionDate'
-      Required = True
     end
-    object Description: TWideMemoField
+    object DescriptionField: TWideMemoField
       FieldName = 'Description'
       Origin = 'Description'
-      Required = True
       BlobType = ftWideMemo
     end
-    object LedgerDataAmount: TCurrencyField
+    object AmountField: TCurrencyField
       FieldName = 'Amount'
       Origin = 'Amount'
-      Required = True
     end
   end
   object TotalData: TFDQuery

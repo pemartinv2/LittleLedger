@@ -60,12 +60,13 @@ type
     LinkPropertyToFieldCaption3: TLinkPropertyToField;
     LinkPropertyToFieldCaption4: TLinkPropertyToField;
     LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
-    SpeedButton1: TSpeedButton;
-    SpeedButton2: TSpeedButton;
-    procedure FormCreate(Sender: TObject);
+    EditButton: TControlListButton;
+    DeleteButton: TControlListButton;
+    procedure AddNewTransactionClick(Sender: TObject);
+    procedure EditButtonClick(Sender: TObject);
+    procedure DeleteButtonClick(Sender: TObject);
   private
     { Private declarations }
-    procedure SetupMainScreen;
   public
     { Public declarations }
     LedgerModule: TLedgerModule;
@@ -80,6 +81,25 @@ implementation
 
 {$R *.dfm}
 
+uses
+  Views.Add, Views.EditForm;
+
+
+procedure TMainWindow.AddNewTransactionClick(Sender: TObject);
+var
+  LAddForm: TAddTransactionForm;
+begin
+  LAddForm := TAddTransactionForm.Create(Self);
+  try
+    if LAddForm.ShowModal = mrOk then
+    begin
+      LedgerModule.AddTransaction(LAddForm.TransactionDate,
+        LAddForm.Description, LAddForm.Amount);
+    end;
+  finally
+    LAddForm.Free;
+  end;
+end;
 
 constructor TMainWindow.Create(AOwner: TComponent);
 begin
@@ -87,14 +107,33 @@ begin
   LedgerModule := TLedgerModule.Create(Self);
 end;
 
-procedure TMainWindow.FormCreate(Sender: TObject);
+procedure TMainWindow.DeleteButtonClick(Sender: TObject);
 begin
-  SetupMainScreen;
+  if MessageDlg('Are you sure to delete this entry?', TMsgDlgType.mtConfirmation,
+    [mbYes,mbNo], 0) = mrYes then
+  begin
+    LedgerModule.LedgerData.Delete;
+  end;
 end;
 
-procedure TMainWindow.SetupMainScreen;
+procedure TMainWindow.EditButtonClick(Sender: TObject);
+var
+  LEditForm: TEditTransaction;
 begin
+  LEditForm := TEditTransaction.Create(Self);
+  try
+    LEditForm.Description := LedgerModule.DescriptionField.Value;
+    LEditForm.TransactionDate := LedgerModule.DateField.Value;
+    LEditForm.Amount := LedgerModule.AmountField.Value;
 
+    if LEditForm.ShowModal = mrOK then
+    begin
+      LedgerModule.ModifyCurrentTransaction(LEditForm.TransactionDate,
+        LEditForm.Description, LEditForm.Amount);
+    end;
+  finally
+    LEditForm.Free;
+  end;
 end;
 
 end.
