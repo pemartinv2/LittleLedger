@@ -82,7 +82,7 @@ implementation
 {$R *.dfm}
 
 uses
-  Views.Add, Views.EditForm;
+  Views.Add, Views.EditForm, System.UITypes;
 
 
 procedure TMainWindow.AddNewTransactionClick(Sender: TObject);

@@ -1,6 +1,7 @@
 object MainWindow: TMainWindow
   Left = 0
   Top = 0
+  ActiveControl = TransactionList
   Caption = 'Little Ledger'
   ClientHeight = 673
   ClientWidth = 829
@@ -119,16 +120,16 @@ object MainWindow: TMainWindow
     object EditButton: TControlListButton
       Left = 448
       Top = 16
-      Width = 33
+      Width = 41
       Height = 25
       Caption = 'Edit'
       LinkHotColor = clHighlight
       OnClick = EditButtonClick
     end
     object DeleteButton: TControlListButton
-      Left = 487
+      Left = 495
       Top = 16
-      Width = 42
+      Width = 50
       Height = 25
       Caption = 'Delete'
       LinkHotColor = clHighlight
